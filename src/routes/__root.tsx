@@ -15,7 +15,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: '@hongsi-ui/core - Warm & Organic UI Library',
+        title: '@fuyukaki-ui/core - Warm & Organic UI Library',
       },
     ],
     links: [

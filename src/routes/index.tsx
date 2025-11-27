@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Button } from '@hongsi-ui/core'
+import { Button } from '@fuyukaki-ui/core'
 
 export const Route = createFileRoute('/')({ component: Home })
 
@@ -36,7 +36,7 @@ function Home() {
 
         <div className="mt-12 p-4 bg-card rounded-lg border border-border">
           <code className="text-sm text-foreground">
-            npm install @hongsi-ui/core
+            npm install @fuyukaki-ui/core
           </code>
         </div>
       </main>

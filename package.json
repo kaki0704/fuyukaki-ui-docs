@@ -1,5 +1,5 @@
 {
-  "name": "@hongsi-ui/docs",
+  "name": "@fuyukaki-ui/docs",
   "private": true,
   "type": "module",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.15.2",
-    "@hongsi-ui/core": "link:../hongsi-ui",
+    "@fuyukaki-ui/core": "link:../fuyukaki-ui",
     "@tailwindcss/vite": "^4.0.6",
     "@tanstack/react-devtools": "^0.7.0",
     "@tanstack/react-router": "^1.132.0",
