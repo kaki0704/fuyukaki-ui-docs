@@ -15,7 +15,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: '@persimmon/ui - Warm & Organic UI Library',
+        title: '@hongsi-ui/core - Warm & Organic UI Library',
       },
     ],
     links: [

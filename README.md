@@ -1,6 +1,6 @@
-# @persimmon/ui Documentation
+# @hongsi-ui/core Documentation
 
-Official documentation site for @persimmon/ui - A modern, accessible React UI component library with Warm & Organic design philosophy.
+Official documentation site for @hongsi-ui/core - A modern, accessible React UI component library with Warm & Organic design philosophy.
 
 ## Development
 
@@ -20,4 +20,4 @@ pnpm build
 - TanStack Start
 - React 18
 - TypeScript
-- @persimmon/ui
+- @hongsi-ui/core
