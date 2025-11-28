@@ -9,38 +9,218 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as DocsRouteImport } from './routes/docs'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as DocsTooltipRouteImport } from './routes/docs/tooltip'
+import { Route as DocsTextareaRouteImport } from './routes/docs/textarea'
+import { Route as DocsSwitchRouteImport } from './routes/docs/switch'
+import { Route as DocsSelectRouteImport } from './routes/docs/select'
+import { Route as DocsRadioRouteImport } from './routes/docs/radio'
+import { Route as DocsLabelRouteImport } from './routes/docs/label'
+import { Route as DocsInputRouteImport } from './routes/docs/input'
+import { Route as DocsDialogRouteImport } from './routes/docs/dialog'
+import { Route as DocsCheckboxRouteImport } from './routes/docs/checkbox'
+import { Route as DocsCardRouteImport } from './routes/docs/card'
+import { Route as DocsButtonRouteImport } from './routes/docs/button'
+import { Route as DocsBadgeRouteImport } from './routes/docs/badge'
+import { Route as DocsAlertRouteImport } from './routes/docs/alert'
 
+const DocsRoute = DocsRouteImport.update({
+  id: '/docs',
+  path: '/docs',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DocsTooltipRoute = DocsTooltipRouteImport.update({
+  id: '/tooltip',
+  path: '/tooltip',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsTextareaRoute = DocsTextareaRouteImport.update({
+  id: '/textarea',
+  path: '/textarea',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsSwitchRoute = DocsSwitchRouteImport.update({
+  id: '/switch',
+  path: '/switch',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsSelectRoute = DocsSelectRouteImport.update({
+  id: '/select',
+  path: '/select',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsRadioRoute = DocsRadioRouteImport.update({
+  id: '/radio',
+  path: '/radio',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsLabelRoute = DocsLabelRouteImport.update({
+  id: '/label',
+  path: '/label',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsInputRoute = DocsInputRouteImport.update({
+  id: '/input',
+  path: '/input',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsDialogRoute = DocsDialogRouteImport.update({
+  id: '/dialog',
+  path: '/dialog',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsCheckboxRoute = DocsCheckboxRouteImport.update({
+  id: '/checkbox',
+  path: '/checkbox',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsCardRoute = DocsCardRouteImport.update({
+  id: '/card',
+  path: '/card',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsButtonRoute = DocsButtonRouteImport.update({
+  id: '/button',
+  path: '/button',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsBadgeRoute = DocsBadgeRouteImport.update({
+  id: '/badge',
+  path: '/badge',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsAlertRoute = DocsAlertRouteImport.update({
+  id: '/alert',
+  path: '/alert',
+  getParentRoute: () => DocsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/docs': typeof DocsRouteWithChildren
+  '/docs/alert': typeof DocsAlertRoute
+  '/docs/badge': typeof DocsBadgeRoute
+  '/docs/button': typeof DocsButtonRoute
+  '/docs/card': typeof DocsCardRoute
+  '/docs/checkbox': typeof DocsCheckboxRoute
+  '/docs/dialog': typeof DocsDialogRoute
+  '/docs/input': typeof DocsInputRoute
+  '/docs/label': typeof DocsLabelRoute
+  '/docs/radio': typeof DocsRadioRoute
+  '/docs/select': typeof DocsSelectRoute
+  '/docs/switch': typeof DocsSwitchRoute
+  '/docs/textarea': typeof DocsTextareaRoute
+  '/docs/tooltip': typeof DocsTooltipRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/docs': typeof DocsRouteWithChildren
+  '/docs/alert': typeof DocsAlertRoute
+  '/docs/badge': typeof DocsBadgeRoute
+  '/docs/button': typeof DocsButtonRoute
+  '/docs/card': typeof DocsCardRoute
+  '/docs/checkbox': typeof DocsCheckboxRoute
+  '/docs/dialog': typeof DocsDialogRoute
+  '/docs/input': typeof DocsInputRoute
+  '/docs/label': typeof DocsLabelRoute
+  '/docs/radio': typeof DocsRadioRoute
+  '/docs/select': typeof DocsSelectRoute
+  '/docs/switch': typeof DocsSwitchRoute
+  '/docs/textarea': typeof DocsTextareaRoute
+  '/docs/tooltip': typeof DocsTooltipRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/docs': typeof DocsRouteWithChildren
+  '/docs/alert': typeof DocsAlertRoute
+  '/docs/badge': typeof DocsBadgeRoute
+  '/docs/button': typeof DocsButtonRoute
+  '/docs/card': typeof DocsCardRoute
+  '/docs/checkbox': typeof DocsCheckboxRoute
+  '/docs/dialog': typeof DocsDialogRoute
+  '/docs/input': typeof DocsInputRoute
+  '/docs/label': typeof DocsLabelRoute
+  '/docs/radio': typeof DocsRadioRoute
+  '/docs/select': typeof DocsSelectRoute
+  '/docs/switch': typeof DocsSwitchRoute
+  '/docs/textarea': typeof DocsTextareaRoute
+  '/docs/tooltip': typeof DocsTooltipRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/docs'
+    | '/docs/alert'
+    | '/docs/badge'
+    | '/docs/button'
+    | '/docs/card'
+    | '/docs/checkbox'
+    | '/docs/dialog'
+    | '/docs/input'
+    | '/docs/label'
+    | '/docs/radio'
+    | '/docs/select'
+    | '/docs/switch'
+    | '/docs/textarea'
+    | '/docs/tooltip'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/docs'
+    | '/docs/alert'
+    | '/docs/badge'
+    | '/docs/button'
+    | '/docs/card'
+    | '/docs/checkbox'
+    | '/docs/dialog'
+    | '/docs/input'
+    | '/docs/label'
+    | '/docs/radio'
+    | '/docs/select'
+    | '/docs/switch'
+    | '/docs/textarea'
+    | '/docs/tooltip'
+  id:
+    | '__root__'
+    | '/'
+    | '/docs'
+    | '/docs/alert'
+    | '/docs/badge'
+    | '/docs/button'
+    | '/docs/card'
+    | '/docs/checkbox'
+    | '/docs/dialog'
+    | '/docs/input'
+    | '/docs/label'
+    | '/docs/radio'
+    | '/docs/select'
+    | '/docs/switch'
+    | '/docs/textarea'
+    | '/docs/tooltip'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  DocsRoute: typeof DocsRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/docs': {
+      id: '/docs'
+      path: '/docs'
+      fullPath: '/docs'
+      preLoaderRoute: typeof DocsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -48,11 +228,137 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/docs/tooltip': {
+      id: '/docs/tooltip'
+      path: '/tooltip'
+      fullPath: '/docs/tooltip'
+      preLoaderRoute: typeof DocsTooltipRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/textarea': {
+      id: '/docs/textarea'
+      path: '/textarea'
+      fullPath: '/docs/textarea'
+      preLoaderRoute: typeof DocsTextareaRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/switch': {
+      id: '/docs/switch'
+      path: '/switch'
+      fullPath: '/docs/switch'
+      preLoaderRoute: typeof DocsSwitchRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/select': {
+      id: '/docs/select'
+      path: '/select'
+      fullPath: '/docs/select'
+      preLoaderRoute: typeof DocsSelectRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/radio': {
+      id: '/docs/radio'
+      path: '/radio'
+      fullPath: '/docs/radio'
+      preLoaderRoute: typeof DocsRadioRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/label': {
+      id: '/docs/label'
+      path: '/label'
+      fullPath: '/docs/label'
+      preLoaderRoute: typeof DocsLabelRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/input': {
+      id: '/docs/input'
+      path: '/input'
+      fullPath: '/docs/input'
+      preLoaderRoute: typeof DocsInputRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/dialog': {
+      id: '/docs/dialog'
+      path: '/dialog'
+      fullPath: '/docs/dialog'
+      preLoaderRoute: typeof DocsDialogRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/checkbox': {
+      id: '/docs/checkbox'
+      path: '/checkbox'
+      fullPath: '/docs/checkbox'
+      preLoaderRoute: typeof DocsCheckboxRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/card': {
+      id: '/docs/card'
+      path: '/card'
+      fullPath: '/docs/card'
+      preLoaderRoute: typeof DocsCardRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/button': {
+      id: '/docs/button'
+      path: '/button'
+      fullPath: '/docs/button'
+      preLoaderRoute: typeof DocsButtonRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/badge': {
+      id: '/docs/badge'
+      path: '/badge'
+      fullPath: '/docs/badge'
+      preLoaderRoute: typeof DocsBadgeRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/alert': {
+      id: '/docs/alert'
+      path: '/alert'
+      fullPath: '/docs/alert'
+      preLoaderRoute: typeof DocsAlertRouteImport
+      parentRoute: typeof DocsRoute
+    }
   }
 }
 
+interface DocsRouteChildren {
+  DocsAlertRoute: typeof DocsAlertRoute
+  DocsBadgeRoute: typeof DocsBadgeRoute
+  DocsButtonRoute: typeof DocsButtonRoute
+  DocsCardRoute: typeof DocsCardRoute
+  DocsCheckboxRoute: typeof DocsCheckboxRoute
+  DocsDialogRoute: typeof DocsDialogRoute
+  DocsInputRoute: typeof DocsInputRoute
+  DocsLabelRoute: typeof DocsLabelRoute
+  DocsRadioRoute: typeof DocsRadioRoute
+  DocsSelectRoute: typeof DocsSelectRoute
+  DocsSwitchRoute: typeof DocsSwitchRoute
+  DocsTextareaRoute: typeof DocsTextareaRoute
+  DocsTooltipRoute: typeof DocsTooltipRoute
+}
+
+const DocsRouteChildren: DocsRouteChildren = {
+  DocsAlertRoute: DocsAlertRoute,
+  DocsBadgeRoute: DocsBadgeRoute,
+  DocsButtonRoute: DocsButtonRoute,
+  DocsCardRoute: DocsCardRoute,
+  DocsCheckboxRoute: DocsCheckboxRoute,
+  DocsDialogRoute: DocsDialogRoute,
+  DocsInputRoute: DocsInputRoute,
+  DocsLabelRoute: DocsLabelRoute,
+  DocsRadioRoute: DocsRadioRoute,
+  DocsSelectRoute: DocsSelectRoute,
+  DocsSwitchRoute: DocsSwitchRoute,
+  DocsTextareaRoute: DocsTextareaRoute,
+  DocsTooltipRoute: DocsTooltipRoute,
+}
+
+const DocsRouteWithChildren = DocsRoute._addFileChildren(DocsRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  DocsRoute: DocsRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

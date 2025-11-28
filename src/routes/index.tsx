@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { Button } from 'fuyukaki-ui'
 
 export const Route = createFileRoute('/')({ component: Home })
@@ -7,7 +7,7 @@ function Home() {
   return (
     <div className="min-h-screen bg-background flex flex-col items-center justify-center px-4">
       <main className="max-w-4xl mx-auto text-center">
-        <div className="mb-8">
+         <div className="mb-8">
           <img
             src="/persimmon.png"
             alt="Persimmon UI"
@@ -26,12 +26,16 @@ function Home() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button variant="primary" size="lg">
-            Get Started
-          </Button>
-          <Button variant="outline" size="lg">
-            View Components
-          </Button>
+          <Link to="/docs/button">
+            <Button variant="primary" size="lg">
+              Get Started
+            </Button>
+          </Link>
+          <Link to="/docs/button">
+            <Button variant="outline" size="lg">
+              View Components
+            </Button>
+          </Link>
         </div>
 
         <div className="mt-12 p-4 bg-card rounded-lg border border-border">
