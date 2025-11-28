@@ -1,6 +1,5 @@
 import { createFileRoute, Link, Outlet } from '@tanstack/react-router'
 import { useState } from 'react'
-import { Button } from 'fuyukaki-ui'
 
 export const Route = createFileRoute('/docs')({
   component: DocsLayout,
@@ -57,10 +56,8 @@ function DocsLayout() {
                   GitHub
                 </a>
               </nav>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="sm:hidden"
+              <button
+                className="sm:hidden p-2 text-foreground hover:text-primary transition-colors"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label="Toggle menu"
               >
@@ -86,7 +83,7 @@ function DocsLayout() {
                     />
                   )}
                 </svg>
-              </Button>
+              </button>
             </div>
           </div>
         </div>
