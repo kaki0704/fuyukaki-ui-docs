@@ -1,6 +1,6 @@
-# @fuyukaki-ui/core Documentation
+# fuyukaki-ui Documentation
 
-Official documentation site for @fuyukaki-ui/core - A modern, accessible React UI component library with Warm & Organic design philosophy.
+Official documentation site for fuyukaki-ui - A modern, accessible React UI component library with Warm & Organic design philosophy.
 
 ## Development
 
@@ -20,4 +20,4 @@ pnpm build
 - TanStack Start
 - React 18
 - TypeScript
-- @fuyukaki-ui/core
+- fuyukaki-ui
