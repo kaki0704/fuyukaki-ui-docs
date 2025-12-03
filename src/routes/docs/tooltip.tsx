@@ -49,7 +49,7 @@ function App() {
             </Tooltip>
 
             <Tooltip content="Delete this item">
-              <Button variant="danger">Delete</Button>
+              <Button variant="destructive">Delete</Button>
             </Tooltip>
           </div>
         </div>

@@ -1,18 +1,18 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Button } from 'fuyukaki-ui'
+import { Avatar, AvatarFallback, AvatarStatus } from 'fuyukaki-ui'
 import { CodeBlock } from '../../components/CodeBlock'
 
-export const Route = createFileRoute('/docs/button')({
-  component: ButtonDocs,
+export const Route = createFileRoute('/docs/avatar')({
+  component: AvatarDocs,
 })
 
-function ButtonDocs() {
+function AvatarDocs() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-4xl font-bold text-foreground mb-4">Button</h1>
+        <h1 className="text-4xl font-bold text-foreground mb-4">Avatar</h1>
         <p className="text-lg text-muted-foreground">
-          A versatile button component with multiple variants and sizes.
+          A component for displaying user profile images with fallback support and status indicators.
         </p>
       </div>
 
@@ -24,44 +24,76 @@ function ButtonDocs() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-foreground">Usage</h2>
         <CodeBlock
-          code={`import { Button } from 'fuyukaki-ui'
+          code={`import { Avatar, AvatarImage, AvatarFallback } from 'fuyukaki-ui'
 
 function App() {
-  return <Button>Click me</Button>
+  return (
+    <Avatar>
+      <AvatarImage src="https://example.com/avatar.jpg" alt="User" />
+      <AvatarFallback>JD</AvatarFallback>
+    </Avatar>
+  )
 }`}
         />
-      </section>
-
-      <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-foreground">Variants</h2>
-        <div className="bg-card border border-border rounded-lg p-6">
-          <div className="flex flex-wrap gap-4">
-            <Button variant="primary">Primary</Button>
-            <Button variant="secondary">Secondary</Button>
-            <Button variant="outline">Outline</Button>
-            <Button variant="ghost">Ghost</Button>
-            <Button variant="destructive">Destructive</Button>
-          </div>
-        </div>
       </section>
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-foreground">Sizes</h2>
         <div className="bg-card border border-border rounded-lg p-6">
           <div className="flex flex-wrap items-center gap-4">
-            <Button size="sm">Small</Button>
-            <Button size="md">Medium</Button>
-            <Button size="lg">Large</Button>
+            <Avatar size="xs">
+              <AvatarFallback>XS</AvatarFallback>
+            </Avatar>
+            <Avatar size="sm">
+              <AvatarFallback>SM</AvatarFallback>
+            </Avatar>
+            <Avatar size="md">
+              <AvatarFallback>MD</AvatarFallback>
+            </Avatar>
+            <Avatar size="lg">
+              <AvatarFallback>LG</AvatarFallback>
+            </Avatar>
+            <Avatar size="xl">
+              <AvatarFallback>XL</AvatarFallback>
+            </Avatar>
           </div>
         </div>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-foreground">States</h2>
+        <h2 className="text-2xl font-semibold text-foreground">Shapes</h2>
         <div className="bg-card border border-border rounded-lg p-6">
-          <div className="flex flex-wrap gap-4">
-            <Button>Default</Button>
-            <Button disabled>Disabled</Button>
+          <div className="flex flex-wrap items-center gap-4">
+            <Avatar shape="circle">
+              <AvatarFallback>CI</AvatarFallback>
+            </Avatar>
+            <Avatar shape="square">
+              <AvatarFallback>SQ</AvatarFallback>
+            </Avatar>
+          </div>
+        </div>
+      </section>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold text-foreground">With Status</h2>
+        <div className="bg-card border border-border rounded-lg p-6">
+          <div className="flex flex-wrap items-center gap-4">
+            <Avatar>
+              <AvatarFallback>ON</AvatarFallback>
+              <AvatarStatus status="online" />
+            </Avatar>
+            <Avatar>
+              <AvatarFallback>OF</AvatarFallback>
+              <AvatarStatus status="offline" />
+            </Avatar>
+            <Avatar>
+              <AvatarFallback>BY</AvatarFallback>
+              <AvatarStatus status="busy" />
+            </Avatar>
+            <Avatar>
+              <AvatarFallback>AW</AvatarFallback>
+              <AvatarStatus status="away" />
+            </Avatar>
           </div>
         </div>
       </section>
@@ -85,25 +117,18 @@ function App() {
             </thead>
             <tbody className="divide-y divide-border">
               <tr>
-                <td className="px-3 sm:px-4 py-3 font-mono text-xs sm:text-sm">variant</td>
-                <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-muted-foreground">
-                  'primary' | 'secondary' | 'outline' | 'ghost' | 'danger'
-                </td>
-                <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm">'primary'</td>
-              </tr>
-              <tr>
                 <td className="px-3 sm:px-4 py-3 font-mono text-xs sm:text-sm">size</td>
                 <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-muted-foreground">
-                  'sm' | 'md' | 'lg'
+                  'xs' | 'sm' | 'md' | 'lg' | 'xl'
                 </td>
                 <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm">'md'</td>
               </tr>
               <tr>
-                <td className="px-3 sm:px-4 py-3 font-mono text-xs sm:text-sm">disabled</td>
+                <td className="px-3 sm:px-4 py-3 font-mono text-xs sm:text-sm">shape</td>
                 <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-muted-foreground">
-                  boolean
+                  'circle' | 'square'
                 </td>
-                <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm">false</td>
+                <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm">'circle'</td>
               </tr>
             </tbody>
           </table>

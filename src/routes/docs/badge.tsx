@@ -37,11 +37,10 @@ function App() {
         <div className="bg-card border border-border rounded-lg p-6">
           <div className="flex flex-wrap items-center gap-4">
             <Badge variant="default">Default</Badge>
-            <Badge variant="primary">Primary</Badge>
             <Badge variant="secondary">Secondary</Badge>
+            <Badge variant="outline">Outline</Badge>
             <Badge variant="success">Success</Badge>
-            <Badge variant="warning">Warning</Badge>
-            <Badge variant="danger">Danger</Badge>
+            <Badge variant="destructive">Destructive</Badge>
           </div>
         </div>
       </section>
@@ -55,7 +54,7 @@ function App() {
           </div>
           <div className="flex items-center gap-2">
             <span className="text-foreground">Priority:</span>
-            <Badge variant="danger">High</Badge>
+            <Badge variant="destructive">High</Badge>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-foreground">Tags:</span>

@@ -49,7 +49,7 @@ function App() {
             </AlertDescription>
           </Alert>
 
-          <Alert variant="info">
+          <Alert variant="default">
             <AlertTitle>Info</AlertTitle>
             <AlertDescription>
               This is an informational message.
@@ -70,7 +70,7 @@ function App() {
             </AlertDescription>
           </Alert>
 
-          <Alert variant="danger">
+          <Alert variant="destructive">
             <AlertTitle>Error</AlertTitle>
             <AlertDescription>
               An error occurred while processing your request.

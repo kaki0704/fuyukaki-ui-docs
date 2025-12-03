@@ -1,18 +1,18 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { Button } from 'fuyukaki-ui'
+import { Spinner } from 'fuyukaki-ui'
 import { CodeBlock } from '../../components/CodeBlock'
 
-export const Route = createFileRoute('/docs/button')({
-  component: ButtonDocs,
+export const Route = createFileRoute('/docs/spinner')({
+  component: SpinnerDocs,
 })
 
-function ButtonDocs() {
+function SpinnerDocs() {
   return (
     <div className="space-y-8">
       <div>
-        <h1 className="text-4xl font-bold text-foreground mb-4">Button</h1>
+        <h1 className="text-4xl font-bold text-foreground mb-4">Spinner</h1>
         <p className="text-lg text-muted-foreground">
-          A versatile button component with multiple variants and sizes.
+          A loading spinner component to indicate loading states.
         </p>
       </div>
 
@@ -24,44 +24,50 @@ function ButtonDocs() {
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-foreground">Usage</h2>
         <CodeBlock
-          code={`import { Button } from 'fuyukaki-ui'
+          code={`import { Spinner } from 'fuyukaki-ui'
 
 function App() {
-  return <Button>Click me</Button>
+  return <Spinner />
 }`}
         />
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-foreground">Variants</h2>
-        <div className="bg-card border border-border rounded-lg p-6">
-          <div className="flex flex-wrap gap-4">
-            <Button variant="primary">Primary</Button>
-            <Button variant="secondary">Secondary</Button>
-            <Button variant="outline">Outline</Button>
-            <Button variant="ghost">Ghost</Button>
-            <Button variant="destructive">Destructive</Button>
-          </div>
-        </div>
-      </section>
-
-      <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-foreground">Sizes</h2>
         <div className="bg-card border border-border rounded-lg p-6">
-          <div className="flex flex-wrap items-center gap-4">
-            <Button size="sm">Small</Button>
-            <Button size="md">Medium</Button>
-            <Button size="lg">Large</Button>
+          <div className="flex flex-wrap items-center gap-6">
+            <div className="text-center">
+              <Spinner size="sm" />
+              <p className="text-sm text-muted-foreground mt-2">Small</p>
+            </div>
+            <div className="text-center">
+              <Spinner size="md" />
+              <p className="text-sm text-muted-foreground mt-2">Medium</p>
+            </div>
+            <div className="text-center">
+              <Spinner size="lg" />
+              <p className="text-sm text-muted-foreground mt-2">Large</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-semibold text-foreground">States</h2>
+        <h2 className="text-2xl font-semibold text-foreground">Variants</h2>
         <div className="bg-card border border-border rounded-lg p-6">
-          <div className="flex flex-wrap gap-4">
-            <Button>Default</Button>
-            <Button disabled>Disabled</Button>
+          <div className="flex flex-wrap items-center gap-6">
+            <div className="text-center">
+              <Spinner variant="primary" />
+              <p className="text-sm text-muted-foreground mt-2">Primary</p>
+            </div>
+            <div className="text-center">
+              <Spinner variant="secondary" />
+              <p className="text-sm text-muted-foreground mt-2">Secondary</p>
+            </div>
+            <div className="text-center">
+              <Spinner variant="muted" />
+              <p className="text-sm text-muted-foreground mt-2">Muted</p>
+            </div>
           </div>
         </div>
       </section>
@@ -85,13 +91,6 @@ function App() {
             </thead>
             <tbody className="divide-y divide-border">
               <tr>
-                <td className="px-3 sm:px-4 py-3 font-mono text-xs sm:text-sm">variant</td>
-                <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-muted-foreground">
-                  'primary' | 'secondary' | 'outline' | 'ghost' | 'danger'
-                </td>
-                <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm">'primary'</td>
-              </tr>
-              <tr>
                 <td className="px-3 sm:px-4 py-3 font-mono text-xs sm:text-sm">size</td>
                 <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-muted-foreground">
                   'sm' | 'md' | 'lg'
@@ -99,11 +98,11 @@ function App() {
                 <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm">'md'</td>
               </tr>
               <tr>
-                <td className="px-3 sm:px-4 py-3 font-mono text-xs sm:text-sm">disabled</td>
+                <td className="px-3 sm:px-4 py-3 font-mono text-xs sm:text-sm">variant</td>
                 <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm text-muted-foreground">
-                  boolean
+                  'primary' | 'secondary' | 'muted'
                 </td>
-                <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm">false</td>
+                <td className="px-3 sm:px-4 py-3 text-xs sm:text-sm">'primary'</td>
               </tr>
             </tbody>
           </table>

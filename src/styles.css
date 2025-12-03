@@ -1,18 +1,5 @@
 @import "tailwindcss";
-
-@theme {
-  /* Warm & Organic Color Palette - "No Black, No Gray" Policy */
-  --color-background: 32 46% 98%;        /* 生成り (Off White) #FAF7F2 */
-  --color-foreground: 18 19% 26%;        /* 渋色 (Shibu Brown) #4E3D35 */
-  --color-card: 20 75% 95%;              /* 淡柿 (Pale Orange) #FCEDE6 */
-  --color-primary: 24 98% 46%;           /* 柿色 (Persimmon) #EB6101 */
-  --color-secondary: 88 30% 40%;         /* 葉色 (Leaf Green) #6A8347 */
-  --color-muted: 30 20% 85%;             /* Muted */
-  --color-muted-foreground: 30 10% 45%;  /* Muted Foreground */
-  --color-border: 30 20% 85%;            /* Border */
-  --color-ring: 24 60% 50%;              /* Ring */
-  --radius: 8px;
-}
+@import "fuyukaki-ui/theme.css";
 
 body {
   @apply m-0 bg-background text-foreground;

@@ -12,17 +12,27 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as DocsRouteImport } from './routes/docs'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as DocsTooltipRouteImport } from './routes/docs/tooltip'
+import { Route as DocsToastRouteImport } from './routes/docs/toast'
 import { Route as DocsTextareaRouteImport } from './routes/docs/textarea'
+import { Route as DocsTabsRouteImport } from './routes/docs/tabs'
+import { Route as DocsTableRouteImport } from './routes/docs/table'
 import { Route as DocsSwitchRouteImport } from './routes/docs/switch'
+import { Route as DocsSpinnerRouteImport } from './routes/docs/spinner'
+import { Route as DocsSliderRouteImport } from './routes/docs/slider'
 import { Route as DocsSelectRouteImport } from './routes/docs/select'
 import { Route as DocsRadioRouteImport } from './routes/docs/radio'
+import { Route as DocsProgressRouteImport } from './routes/docs/progress'
+import { Route as DocsNavMenuRouteImport } from './routes/docs/nav-menu'
 import { Route as DocsLabelRouteImport } from './routes/docs/label'
 import { Route as DocsInputRouteImport } from './routes/docs/input'
+import { Route as DocsDropdownMenuRouteImport } from './routes/docs/dropdown-menu'
 import { Route as DocsDialogRouteImport } from './routes/docs/dialog'
+import { Route as DocsConfettiRouteImport } from './routes/docs/confetti'
 import { Route as DocsCheckboxRouteImport } from './routes/docs/checkbox'
 import { Route as DocsCardRouteImport } from './routes/docs/card'
 import { Route as DocsButtonRouteImport } from './routes/docs/button'
 import { Route as DocsBadgeRouteImport } from './routes/docs/badge'
+import { Route as DocsAvatarRouteImport } from './routes/docs/avatar'
 import { Route as DocsAlertRouteImport } from './routes/docs/alert'
 
 const DocsRoute = DocsRouteImport.update({
@@ -40,14 +50,39 @@ const DocsTooltipRoute = DocsTooltipRouteImport.update({
   path: '/tooltip',
   getParentRoute: () => DocsRoute,
 } as any)
+const DocsToastRoute = DocsToastRouteImport.update({
+  id: '/toast',
+  path: '/toast',
+  getParentRoute: () => DocsRoute,
+} as any)
 const DocsTextareaRoute = DocsTextareaRouteImport.update({
   id: '/textarea',
   path: '/textarea',
   getParentRoute: () => DocsRoute,
 } as any)
+const DocsTabsRoute = DocsTabsRouteImport.update({
+  id: '/tabs',
+  path: '/tabs',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsTableRoute = DocsTableRouteImport.update({
+  id: '/table',
+  path: '/table',
+  getParentRoute: () => DocsRoute,
+} as any)
 const DocsSwitchRoute = DocsSwitchRouteImport.update({
   id: '/switch',
   path: '/switch',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsSpinnerRoute = DocsSpinnerRouteImport.update({
+  id: '/spinner',
+  path: '/spinner',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsSliderRoute = DocsSliderRouteImport.update({
+  id: '/slider',
+  path: '/slider',
   getParentRoute: () => DocsRoute,
 } as any)
 const DocsSelectRoute = DocsSelectRouteImport.update({
@@ -60,6 +95,16 @@ const DocsRadioRoute = DocsRadioRouteImport.update({
   path: '/radio',
   getParentRoute: () => DocsRoute,
 } as any)
+const DocsProgressRoute = DocsProgressRouteImport.update({
+  id: '/progress',
+  path: '/progress',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsNavMenuRoute = DocsNavMenuRouteImport.update({
+  id: '/nav-menu',
+  path: '/nav-menu',
+  getParentRoute: () => DocsRoute,
+} as any)
 const DocsLabelRoute = DocsLabelRouteImport.update({
   id: '/label',
   path: '/label',
@@ -70,9 +115,19 @@ const DocsInputRoute = DocsInputRouteImport.update({
   path: '/input',
   getParentRoute: () => DocsRoute,
 } as any)
+const DocsDropdownMenuRoute = DocsDropdownMenuRouteImport.update({
+  id: '/dropdown-menu',
+  path: '/dropdown-menu',
+  getParentRoute: () => DocsRoute,
+} as any)
 const DocsDialogRoute = DocsDialogRouteImport.update({
   id: '/dialog',
   path: '/dialog',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsConfettiRoute = DocsConfettiRouteImport.update({
+  id: '/confetti',
+  path: '/confetti',
   getParentRoute: () => DocsRoute,
 } as any)
 const DocsCheckboxRoute = DocsCheckboxRouteImport.update({
@@ -95,6 +150,11 @@ const DocsBadgeRoute = DocsBadgeRouteImport.update({
   path: '/badge',
   getParentRoute: () => DocsRoute,
 } as any)
+const DocsAvatarRoute = DocsAvatarRouteImport.update({
+  id: '/avatar',
+  path: '/avatar',
+  getParentRoute: () => DocsRoute,
+} as any)
 const DocsAlertRoute = DocsAlertRouteImport.update({
   id: '/alert',
   path: '/alert',
@@ -105,34 +165,54 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/docs': typeof DocsRouteWithChildren
   '/docs/alert': typeof DocsAlertRoute
+  '/docs/avatar': typeof DocsAvatarRoute
   '/docs/badge': typeof DocsBadgeRoute
   '/docs/button': typeof DocsButtonRoute
   '/docs/card': typeof DocsCardRoute
   '/docs/checkbox': typeof DocsCheckboxRoute
+  '/docs/confetti': typeof DocsConfettiRoute
   '/docs/dialog': typeof DocsDialogRoute
+  '/docs/dropdown-menu': typeof DocsDropdownMenuRoute
   '/docs/input': typeof DocsInputRoute
   '/docs/label': typeof DocsLabelRoute
+  '/docs/nav-menu': typeof DocsNavMenuRoute
+  '/docs/progress': typeof DocsProgressRoute
   '/docs/radio': typeof DocsRadioRoute
   '/docs/select': typeof DocsSelectRoute
+  '/docs/slider': typeof DocsSliderRoute
+  '/docs/spinner': typeof DocsSpinnerRoute
   '/docs/switch': typeof DocsSwitchRoute
+  '/docs/table': typeof DocsTableRoute
+  '/docs/tabs': typeof DocsTabsRoute
   '/docs/textarea': typeof DocsTextareaRoute
+  '/docs/toast': typeof DocsToastRoute
   '/docs/tooltip': typeof DocsTooltipRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/docs': typeof DocsRouteWithChildren
   '/docs/alert': typeof DocsAlertRoute
+  '/docs/avatar': typeof DocsAvatarRoute
   '/docs/badge': typeof DocsBadgeRoute
   '/docs/button': typeof DocsButtonRoute
   '/docs/card': typeof DocsCardRoute
   '/docs/checkbox': typeof DocsCheckboxRoute
+  '/docs/confetti': typeof DocsConfettiRoute
   '/docs/dialog': typeof DocsDialogRoute
+  '/docs/dropdown-menu': typeof DocsDropdownMenuRoute
   '/docs/input': typeof DocsInputRoute
   '/docs/label': typeof DocsLabelRoute
+  '/docs/nav-menu': typeof DocsNavMenuRoute
+  '/docs/progress': typeof DocsProgressRoute
   '/docs/radio': typeof DocsRadioRoute
   '/docs/select': typeof DocsSelectRoute
+  '/docs/slider': typeof DocsSliderRoute
+  '/docs/spinner': typeof DocsSpinnerRoute
   '/docs/switch': typeof DocsSwitchRoute
+  '/docs/table': typeof DocsTableRoute
+  '/docs/tabs': typeof DocsTabsRoute
   '/docs/textarea': typeof DocsTextareaRoute
+  '/docs/toast': typeof DocsToastRoute
   '/docs/tooltip': typeof DocsTooltipRoute
 }
 export interface FileRoutesById {
@@ -140,17 +220,27 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/docs': typeof DocsRouteWithChildren
   '/docs/alert': typeof DocsAlertRoute
+  '/docs/avatar': typeof DocsAvatarRoute
   '/docs/badge': typeof DocsBadgeRoute
   '/docs/button': typeof DocsButtonRoute
   '/docs/card': typeof DocsCardRoute
   '/docs/checkbox': typeof DocsCheckboxRoute
+  '/docs/confetti': typeof DocsConfettiRoute
   '/docs/dialog': typeof DocsDialogRoute
+  '/docs/dropdown-menu': typeof DocsDropdownMenuRoute
   '/docs/input': typeof DocsInputRoute
   '/docs/label': typeof DocsLabelRoute
+  '/docs/nav-menu': typeof DocsNavMenuRoute
+  '/docs/progress': typeof DocsProgressRoute
   '/docs/radio': typeof DocsRadioRoute
   '/docs/select': typeof DocsSelectRoute
+  '/docs/slider': typeof DocsSliderRoute
+  '/docs/spinner': typeof DocsSpinnerRoute
   '/docs/switch': typeof DocsSwitchRoute
+  '/docs/table': typeof DocsTableRoute
+  '/docs/tabs': typeof DocsTabsRoute
   '/docs/textarea': typeof DocsTextareaRoute
+  '/docs/toast': typeof DocsToastRoute
   '/docs/tooltip': typeof DocsTooltipRoute
 }
 export interface FileRouteTypes {
@@ -159,51 +249,81 @@ export interface FileRouteTypes {
     | '/'
     | '/docs'
     | '/docs/alert'
+    | '/docs/avatar'
     | '/docs/badge'
     | '/docs/button'
     | '/docs/card'
     | '/docs/checkbox'
+    | '/docs/confetti'
     | '/docs/dialog'
+    | '/docs/dropdown-menu'
     | '/docs/input'
     | '/docs/label'
+    | '/docs/nav-menu'
+    | '/docs/progress'
     | '/docs/radio'
     | '/docs/select'
+    | '/docs/slider'
+    | '/docs/spinner'
     | '/docs/switch'
+    | '/docs/table'
+    | '/docs/tabs'
     | '/docs/textarea'
+    | '/docs/toast'
     | '/docs/tooltip'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/docs'
     | '/docs/alert'
+    | '/docs/avatar'
     | '/docs/badge'
     | '/docs/button'
     | '/docs/card'
     | '/docs/checkbox'
+    | '/docs/confetti'
     | '/docs/dialog'
+    | '/docs/dropdown-menu'
     | '/docs/input'
     | '/docs/label'
+    | '/docs/nav-menu'
+    | '/docs/progress'
     | '/docs/radio'
     | '/docs/select'
+    | '/docs/slider'
+    | '/docs/spinner'
     | '/docs/switch'
+    | '/docs/table'
+    | '/docs/tabs'
     | '/docs/textarea'
+    | '/docs/toast'
     | '/docs/tooltip'
   id:
     | '__root__'
     | '/'
     | '/docs'
     | '/docs/alert'
+    | '/docs/avatar'
     | '/docs/badge'
     | '/docs/button'
     | '/docs/card'
     | '/docs/checkbox'
+    | '/docs/confetti'
     | '/docs/dialog'
+    | '/docs/dropdown-menu'
     | '/docs/input'
     | '/docs/label'
+    | '/docs/nav-menu'
+    | '/docs/progress'
     | '/docs/radio'
     | '/docs/select'
+    | '/docs/slider'
+    | '/docs/spinner'
     | '/docs/switch'
+    | '/docs/table'
+    | '/docs/tabs'
     | '/docs/textarea'
+    | '/docs/toast'
     | '/docs/tooltip'
   fileRoutesById: FileRoutesById
 }
@@ -235,6 +355,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsTooltipRouteImport
       parentRoute: typeof DocsRoute
     }
+    '/docs/toast': {
+      id: '/docs/toast'
+      path: '/toast'
+      fullPath: '/docs/toast'
+      preLoaderRoute: typeof DocsToastRouteImport
+      parentRoute: typeof DocsRoute
+    }
     '/docs/textarea': {
       id: '/docs/textarea'
       path: '/textarea'
@@ -242,11 +369,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsTextareaRouteImport
       parentRoute: typeof DocsRoute
     }
+    '/docs/tabs': {
+      id: '/docs/tabs'
+      path: '/tabs'
+      fullPath: '/docs/tabs'
+      preLoaderRoute: typeof DocsTabsRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/table': {
+      id: '/docs/table'
+      path: '/table'
+      fullPath: '/docs/table'
+      preLoaderRoute: typeof DocsTableRouteImport
+      parentRoute: typeof DocsRoute
+    }
     '/docs/switch': {
       id: '/docs/switch'
       path: '/switch'
       fullPath: '/docs/switch'
       preLoaderRoute: typeof DocsSwitchRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/spinner': {
+      id: '/docs/spinner'
+      path: '/spinner'
+      fullPath: '/docs/spinner'
+      preLoaderRoute: typeof DocsSpinnerRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/slider': {
+      id: '/docs/slider'
+      path: '/slider'
+      fullPath: '/docs/slider'
+      preLoaderRoute: typeof DocsSliderRouteImport
       parentRoute: typeof DocsRoute
     }
     '/docs/select': {
@@ -263,6 +418,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsRadioRouteImport
       parentRoute: typeof DocsRoute
     }
+    '/docs/progress': {
+      id: '/docs/progress'
+      path: '/progress'
+      fullPath: '/docs/progress'
+      preLoaderRoute: typeof DocsProgressRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/nav-menu': {
+      id: '/docs/nav-menu'
+      path: '/nav-menu'
+      fullPath: '/docs/nav-menu'
+      preLoaderRoute: typeof DocsNavMenuRouteImport
+      parentRoute: typeof DocsRoute
+    }
     '/docs/label': {
       id: '/docs/label'
       path: '/label'
@@ -277,11 +446,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsInputRouteImport
       parentRoute: typeof DocsRoute
     }
+    '/docs/dropdown-menu': {
+      id: '/docs/dropdown-menu'
+      path: '/dropdown-menu'
+      fullPath: '/docs/dropdown-menu'
+      preLoaderRoute: typeof DocsDropdownMenuRouteImport
+      parentRoute: typeof DocsRoute
+    }
     '/docs/dialog': {
       id: '/docs/dialog'
       path: '/dialog'
       fullPath: '/docs/dialog'
       preLoaderRoute: typeof DocsDialogRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/confetti': {
+      id: '/docs/confetti'
+      path: '/confetti'
+      fullPath: '/docs/confetti'
+      preLoaderRoute: typeof DocsConfettiRouteImport
       parentRoute: typeof DocsRoute
     }
     '/docs/checkbox': {
@@ -312,6 +495,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsBadgeRouteImport
       parentRoute: typeof DocsRoute
     }
+    '/docs/avatar': {
+      id: '/docs/avatar'
+      path: '/avatar'
+      fullPath: '/docs/avatar'
+      preLoaderRoute: typeof DocsAvatarRouteImport
+      parentRoute: typeof DocsRoute
+    }
     '/docs/alert': {
       id: '/docs/alert'
       path: '/alert'
@@ -324,33 +514,53 @@ declare module '@tanstack/react-router' {
 
 interface DocsRouteChildren {
   DocsAlertRoute: typeof DocsAlertRoute
+  DocsAvatarRoute: typeof DocsAvatarRoute
   DocsBadgeRoute: typeof DocsBadgeRoute
   DocsButtonRoute: typeof DocsButtonRoute
   DocsCardRoute: typeof DocsCardRoute
   DocsCheckboxRoute: typeof DocsCheckboxRoute
+  DocsConfettiRoute: typeof DocsConfettiRoute
   DocsDialogRoute: typeof DocsDialogRoute
+  DocsDropdownMenuRoute: typeof DocsDropdownMenuRoute
   DocsInputRoute: typeof DocsInputRoute
   DocsLabelRoute: typeof DocsLabelRoute
+  DocsNavMenuRoute: typeof DocsNavMenuRoute
+  DocsProgressRoute: typeof DocsProgressRoute
   DocsRadioRoute: typeof DocsRadioRoute
   DocsSelectRoute: typeof DocsSelectRoute
+  DocsSliderRoute: typeof DocsSliderRoute
+  DocsSpinnerRoute: typeof DocsSpinnerRoute
   DocsSwitchRoute: typeof DocsSwitchRoute
+  DocsTableRoute: typeof DocsTableRoute
+  DocsTabsRoute: typeof DocsTabsRoute
   DocsTextareaRoute: typeof DocsTextareaRoute
+  DocsToastRoute: typeof DocsToastRoute
   DocsTooltipRoute: typeof DocsTooltipRoute
 }
 
 const DocsRouteChildren: DocsRouteChildren = {
   DocsAlertRoute: DocsAlertRoute,
+  DocsAvatarRoute: DocsAvatarRoute,
   DocsBadgeRoute: DocsBadgeRoute,
   DocsButtonRoute: DocsButtonRoute,
   DocsCardRoute: DocsCardRoute,
   DocsCheckboxRoute: DocsCheckboxRoute,
+  DocsConfettiRoute: DocsConfettiRoute,
   DocsDialogRoute: DocsDialogRoute,
+  DocsDropdownMenuRoute: DocsDropdownMenuRoute,
   DocsInputRoute: DocsInputRoute,
   DocsLabelRoute: DocsLabelRoute,
+  DocsNavMenuRoute: DocsNavMenuRoute,
+  DocsProgressRoute: DocsProgressRoute,
   DocsRadioRoute: DocsRadioRoute,
   DocsSelectRoute: DocsSelectRoute,
+  DocsSliderRoute: DocsSliderRoute,
+  DocsSpinnerRoute: DocsSpinnerRoute,
   DocsSwitchRoute: DocsSwitchRoute,
+  DocsTableRoute: DocsTableRoute,
+  DocsTabsRoute: DocsTabsRoute,
   DocsTextareaRoute: DocsTextareaRoute,
+  DocsToastRoute: DocsToastRoute,
   DocsTooltipRoute: DocsTooltipRoute,
 }
 

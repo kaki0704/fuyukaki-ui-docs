@@ -26,13 +26,14 @@ function SelectDocs() {
         <CodeBlock
           code={`import { Select } from 'fuyukaki-ui'
 
-const options = [
-  { value: '1', label: 'Option 1' },
-  { value: '2', label: 'Option 2' },
-]
-
 function App() {
-  return <Select options={options} placeholder="Select option" />
+  return (
+    <Select>
+      <option value="">Select option</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+    </Select>
+  )
 }`}
         />
       </section>
@@ -42,27 +43,20 @@ function App() {
         <div className="bg-card border border-border rounded-lg p-6 space-y-6">
           <div className="space-y-2">
             <Label htmlFor="country">Country</Label>
-            <Select
-              id="country"
-              placeholder="Select a country"
-              options={[
-                { value: 'us', label: 'United States' },
-                { value: 'jp', label: 'Japan' },
-                { value: 'uk', label: 'United Kingdom' },
-              ]}
-            />
+            <Select id="country">
+              <option value="">Select a country</option>
+              <option value="us">United States</option>
+              <option value="jp">Japan</option>
+              <option value="uk">United Kingdom</option>
+            </Select>
           </div>
 
           <div className="space-y-2">
             <Label htmlFor="disabled-select">Disabled</Label>
-            <Select
-              id="disabled-select"
-              placeholder="Select option"
-              disabled
-              options={[
-                { value: '1', label: 'Option 1' },
-              ]}
-            />
+            <Select id="disabled-select" disabled>
+              <option value="">Select option</option>
+              <option value="1">Option 1</option>
+            </Select>
           </div>
         </div>
       </section>

@@ -6,19 +6,29 @@ export const Route = createFileRoute('/docs')({
 })
 
 const components = [
-  { name: 'Button', path: '/docs/button' },
-  { name: 'Badge', path: '/docs/badge' },
-  { name: 'Card', path: '/docs/card' },
-  { name: 'Input', path: '/docs/input' },
   { name: 'Alert', path: '/docs/alert' },
+  { name: 'Avatar', path: '/docs/avatar' },
+  { name: 'Badge', path: '/docs/badge' },
+  { name: 'Button', path: '/docs/button' },
+  { name: 'Card', path: '/docs/card' },
   { name: 'Checkbox', path: '/docs/checkbox' },
+  { name: 'Confetti', path: '/docs/confetti' },
+  { name: 'Dialog', path: '/docs/dialog' },
+  { name: 'Dropdown Menu', path: '/docs/dropdown-menu' },
+  { name: 'Input', path: '/docs/input' },
   { name: 'Label', path: '/docs/label' },
-  { name: 'Textarea', path: '/docs/textarea' },
-  { name: 'Switch', path: '/docs/switch' },
+  { name: 'Nav Menu', path: '/docs/nav-menu' },
+  { name: 'Progress', path: '/docs/progress' },
   { name: 'Radio', path: '/docs/radio' },
   { name: 'Select', path: '/docs/select' },
+  { name: 'Slider', path: '/docs/slider' },
+  { name: 'Spinner', path: '/docs/spinner' },
+  { name: 'Switch', path: '/docs/switch' },
+  { name: 'Table', path: '/docs/table' },
+  { name: 'Tabs', path: '/docs/tabs' },
+  { name: 'Textarea', path: '/docs/textarea' },
+  { name: 'Toast', path: '/docs/toast' },
   { name: 'Tooltip', path: '/docs/tooltip' },
-  { name: 'Dialog', path: '/docs/dialog' },
 ]
 
 function DocsLayout() {
