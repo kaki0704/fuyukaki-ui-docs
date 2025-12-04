@@ -1,4 +1,3 @@
-import { GithubIcon } from 'lucide-react'
 import { GITHUB_URL } from '../constants'
 
 export function Footer() {
@@ -19,7 +18,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <GithubIcon className="h-5 w-5" />
+              <img src="/github-mark.svg" alt="GitHub" className="h-5 w-5 opacity-70" />
             </a>
           </div>
         </div>

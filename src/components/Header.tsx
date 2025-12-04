@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router'
-import { Search, GithubIcon, Menu, X } from 'lucide-react'
+import { Search, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { GITHUB_URL } from '../constants'
 
@@ -37,7 +37,7 @@ export function Header() {
             rel="noopener noreferrer"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            <GithubIcon className="h-5 w-5" />
+            <img src="/github-mark.svg" alt="GitHub" className="h-5 w-5 opacity-70" />
           </a>
         </nav>
 
@@ -69,7 +69,7 @@ export function Header() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground"
             >
-              <GithubIcon className="h-4 w-4" />
+              <img src="/github-mark.svg" alt="GitHub" className="h-4 w-4 opacity-70" />
               GitHub
             </a>
           </nav>

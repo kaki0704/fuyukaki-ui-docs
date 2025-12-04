@@ -74,7 +74,7 @@ function Home() {
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Link to="/docs/button">
-                    <Button variant="primary" size="lg" className="w-full sm:w-auto">
+                    <Button variant="primary" size="lg" className="w-full sm:w-auto cursor-pointer">
                       Get Started
                     </Button>
                   </Link>
@@ -83,7 +83,7 @@ function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                    <Button variant="outline" size="lg" className="w-full sm:w-auto cursor-pointer">
                       View on GitHub
                     </Button>
                   </a>
@@ -161,7 +161,7 @@ function Home() {
               today.
             </p>
             <Link to="/docs/button">
-              <Button variant="primary" size="lg">
+              <Button variant="primary" size="lg" className="cursor-pointer">
                 Explore Components
               </Button>
             </Link>
