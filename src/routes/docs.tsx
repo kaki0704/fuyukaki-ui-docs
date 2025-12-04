@@ -5,6 +5,11 @@ export const Route = createFileRoute('/docs')({
   component: DocsLayout,
 })
 
+const guide = [
+  { name: 'Getting Started', path: '/docs/getting-started' },
+  { name: 'Philosophy', path: '/docs/philosophy' },
+]
+
 const components = [
   { name: 'Alert', path: '/docs/alert' },
   { name: 'Avatar', path: '/docs/avatar' },
@@ -104,6 +109,22 @@ function DocsLayout() {
         <div className="sm:hidden fixed inset-0 top-[73px] bg-background z-40 overflow-y-auto">
           <nav className="container mx-auto px-4 py-4 space-y-1">
             <h3 className="font-semibold text-foreground mb-3 px-3">
+              Guide
+            </h3>
+            {guide.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className="block px-3 py-2 rounded-md text-muted-foreground hover:bg-accent hover:text-foreground transition-colors"
+                activeProps={{
+                  className: 'bg-accent text-foreground font-medium',
+                }}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <h3 className="font-semibold text-foreground mb-3 px-3 pt-4">
               Components
             </h3>
             {components.map((component) => (
@@ -139,6 +160,21 @@ function DocsLayout() {
           <aside className="hidden lg:block w-64 flex-shrink-0">
             <nav className="sticky top-24 space-y-1">
               <h3 className="font-semibold text-foreground mb-3 px-3">
+                Guide
+              </h3>
+              {guide.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className="block px-3 py-2 rounded-md text-muted-foreground hover:bg-accent hover:text-foreground transition-colors"
+                  activeProps={{
+                    className: 'bg-accent text-foreground font-medium',
+                  }}
+                >
+                  {item.name}
+                </Link>
+              ))}
+              <h3 className="font-semibold text-foreground mb-3 px-3 pt-4">
                 Components
               </h3>
               {components.map((component) => (

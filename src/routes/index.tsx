@@ -56,7 +56,7 @@ function Home() {
           <div className="absolute inset-0 bg-linear-to-b from-primary/5 via-transparent to-transparent pointer-events-none" />
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
-            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
               <div className="flex-1 text-center lg:text-left">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
                   <span className="text-primary">Fuyukaki UI</span>
@@ -73,7 +73,7 @@ function Home() {
                 </p>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                  <Link to="/docs/button">
+                  <Link to="/docs/getting-started">
                     <Button variant="primary" size="lg" className="w-full sm:w-auto cursor-pointer">
                       Get Started
                     </Button>

@@ -22,9 +22,11 @@ import { Route as DocsSliderRouteImport } from './routes/docs/slider'
 import { Route as DocsSelectRouteImport } from './routes/docs/select'
 import { Route as DocsRadioRouteImport } from './routes/docs/radio'
 import { Route as DocsProgressRouteImport } from './routes/docs/progress'
+import { Route as DocsPhilosophyRouteImport } from './routes/docs/philosophy'
 import { Route as DocsNavMenuRouteImport } from './routes/docs/nav-menu'
 import { Route as DocsLabelRouteImport } from './routes/docs/label'
 import { Route as DocsInputRouteImport } from './routes/docs/input'
+import { Route as DocsGettingStartedRouteImport } from './routes/docs/getting-started'
 import { Route as DocsDropdownMenuRouteImport } from './routes/docs/dropdown-menu'
 import { Route as DocsDialogRouteImport } from './routes/docs/dialog'
 import { Route as DocsConfettiRouteImport } from './routes/docs/confetti'
@@ -100,6 +102,11 @@ const DocsProgressRoute = DocsProgressRouteImport.update({
   path: '/progress',
   getParentRoute: () => DocsRoute,
 } as any)
+const DocsPhilosophyRoute = DocsPhilosophyRouteImport.update({
+  id: '/philosophy',
+  path: '/philosophy',
+  getParentRoute: () => DocsRoute,
+} as any)
 const DocsNavMenuRoute = DocsNavMenuRouteImport.update({
   id: '/nav-menu',
   path: '/nav-menu',
@@ -113,6 +120,11 @@ const DocsLabelRoute = DocsLabelRouteImport.update({
 const DocsInputRoute = DocsInputRouteImport.update({
   id: '/input',
   path: '/input',
+  getParentRoute: () => DocsRoute,
+} as any)
+const DocsGettingStartedRoute = DocsGettingStartedRouteImport.update({
+  id: '/getting-started',
+  path: '/getting-started',
   getParentRoute: () => DocsRoute,
 } as any)
 const DocsDropdownMenuRoute = DocsDropdownMenuRouteImport.update({
@@ -173,9 +185,11 @@ export interface FileRoutesByFullPath {
   '/docs/confetti': typeof DocsConfettiRoute
   '/docs/dialog': typeof DocsDialogRoute
   '/docs/dropdown-menu': typeof DocsDropdownMenuRoute
+  '/docs/getting-started': typeof DocsGettingStartedRoute
   '/docs/input': typeof DocsInputRoute
   '/docs/label': typeof DocsLabelRoute
   '/docs/nav-menu': typeof DocsNavMenuRoute
+  '/docs/philosophy': typeof DocsPhilosophyRoute
   '/docs/progress': typeof DocsProgressRoute
   '/docs/radio': typeof DocsRadioRoute
   '/docs/select': typeof DocsSelectRoute
@@ -200,9 +214,11 @@ export interface FileRoutesByTo {
   '/docs/confetti': typeof DocsConfettiRoute
   '/docs/dialog': typeof DocsDialogRoute
   '/docs/dropdown-menu': typeof DocsDropdownMenuRoute
+  '/docs/getting-started': typeof DocsGettingStartedRoute
   '/docs/input': typeof DocsInputRoute
   '/docs/label': typeof DocsLabelRoute
   '/docs/nav-menu': typeof DocsNavMenuRoute
+  '/docs/philosophy': typeof DocsPhilosophyRoute
   '/docs/progress': typeof DocsProgressRoute
   '/docs/radio': typeof DocsRadioRoute
   '/docs/select': typeof DocsSelectRoute
@@ -228,9 +244,11 @@ export interface FileRoutesById {
   '/docs/confetti': typeof DocsConfettiRoute
   '/docs/dialog': typeof DocsDialogRoute
   '/docs/dropdown-menu': typeof DocsDropdownMenuRoute
+  '/docs/getting-started': typeof DocsGettingStartedRoute
   '/docs/input': typeof DocsInputRoute
   '/docs/label': typeof DocsLabelRoute
   '/docs/nav-menu': typeof DocsNavMenuRoute
+  '/docs/philosophy': typeof DocsPhilosophyRoute
   '/docs/progress': typeof DocsProgressRoute
   '/docs/radio': typeof DocsRadioRoute
   '/docs/select': typeof DocsSelectRoute
@@ -257,9 +275,11 @@ export interface FileRouteTypes {
     | '/docs/confetti'
     | '/docs/dialog'
     | '/docs/dropdown-menu'
+    | '/docs/getting-started'
     | '/docs/input'
     | '/docs/label'
     | '/docs/nav-menu'
+    | '/docs/philosophy'
     | '/docs/progress'
     | '/docs/radio'
     | '/docs/select'
@@ -284,9 +304,11 @@ export interface FileRouteTypes {
     | '/docs/confetti'
     | '/docs/dialog'
     | '/docs/dropdown-menu'
+    | '/docs/getting-started'
     | '/docs/input'
     | '/docs/label'
     | '/docs/nav-menu'
+    | '/docs/philosophy'
     | '/docs/progress'
     | '/docs/radio'
     | '/docs/select'
@@ -311,9 +333,11 @@ export interface FileRouteTypes {
     | '/docs/confetti'
     | '/docs/dialog'
     | '/docs/dropdown-menu'
+    | '/docs/getting-started'
     | '/docs/input'
     | '/docs/label'
     | '/docs/nav-menu'
+    | '/docs/philosophy'
     | '/docs/progress'
     | '/docs/radio'
     | '/docs/select'
@@ -425,6 +449,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsProgressRouteImport
       parentRoute: typeof DocsRoute
     }
+    '/docs/philosophy': {
+      id: '/docs/philosophy'
+      path: '/philosophy'
+      fullPath: '/docs/philosophy'
+      preLoaderRoute: typeof DocsPhilosophyRouteImport
+      parentRoute: typeof DocsRoute
+    }
     '/docs/nav-menu': {
       id: '/docs/nav-menu'
       path: '/nav-menu'
@@ -444,6 +475,13 @@ declare module '@tanstack/react-router' {
       path: '/input'
       fullPath: '/docs/input'
       preLoaderRoute: typeof DocsInputRouteImport
+      parentRoute: typeof DocsRoute
+    }
+    '/docs/getting-started': {
+      id: '/docs/getting-started'
+      path: '/getting-started'
+      fullPath: '/docs/getting-started'
+      preLoaderRoute: typeof DocsGettingStartedRouteImport
       parentRoute: typeof DocsRoute
     }
     '/docs/dropdown-menu': {
@@ -522,9 +560,11 @@ interface DocsRouteChildren {
   DocsConfettiRoute: typeof DocsConfettiRoute
   DocsDialogRoute: typeof DocsDialogRoute
   DocsDropdownMenuRoute: typeof DocsDropdownMenuRoute
+  DocsGettingStartedRoute: typeof DocsGettingStartedRoute
   DocsInputRoute: typeof DocsInputRoute
   DocsLabelRoute: typeof DocsLabelRoute
   DocsNavMenuRoute: typeof DocsNavMenuRoute
+  DocsPhilosophyRoute: typeof DocsPhilosophyRoute
   DocsProgressRoute: typeof DocsProgressRoute
   DocsRadioRoute: typeof DocsRadioRoute
   DocsSelectRoute: typeof DocsSelectRoute
@@ -548,9 +588,11 @@ const DocsRouteChildren: DocsRouteChildren = {
   DocsConfettiRoute: DocsConfettiRoute,
   DocsDialogRoute: DocsDialogRoute,
   DocsDropdownMenuRoute: DocsDropdownMenuRoute,
+  DocsGettingStartedRoute: DocsGettingStartedRoute,
   DocsInputRoute: DocsInputRoute,
   DocsLabelRoute: DocsLabelRoute,
   DocsNavMenuRoute: DocsNavMenuRoute,
+  DocsPhilosophyRoute: DocsPhilosophyRoute,
   DocsProgressRoute: DocsProgressRoute,
   DocsRadioRoute: DocsRadioRoute,
   DocsSelectRoute: DocsSelectRoute,
