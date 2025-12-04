@@ -26,6 +26,7 @@ import { Route as DocsPhilosophyRouteImport } from './routes/docs/philosophy'
 import { Route as DocsNavMenuRouteImport } from './routes/docs/nav-menu'
 import { Route as DocsLabelRouteImport } from './routes/docs/label'
 import { Route as DocsInputRouteImport } from './routes/docs/input'
+import { Route as DocsHidamariTextRouteImport } from './routes/docs/hidamari-text'
 import { Route as DocsGettingStartedRouteImport } from './routes/docs/getting-started'
 import { Route as DocsDropdownMenuRouteImport } from './routes/docs/dropdown-menu'
 import { Route as DocsDialogRouteImport } from './routes/docs/dialog'
@@ -122,6 +123,11 @@ const DocsInputRoute = DocsInputRouteImport.update({
   path: '/input',
   getParentRoute: () => DocsRoute,
 } as any)
+const DocsHidamariTextRoute = DocsHidamariTextRouteImport.update({
+  id: '/hidamari-text',
+  path: '/hidamari-text',
+  getParentRoute: () => DocsRoute,
+} as any)
 const DocsGettingStartedRoute = DocsGettingStartedRouteImport.update({
   id: '/getting-started',
   path: '/getting-started',
@@ -186,6 +192,7 @@ export interface FileRoutesByFullPath {
   '/docs/dialog': typeof DocsDialogRoute
   '/docs/dropdown-menu': typeof DocsDropdownMenuRoute
   '/docs/getting-started': typeof DocsGettingStartedRoute
+  '/docs/hidamari-text': typeof DocsHidamariTextRoute
   '/docs/input': typeof DocsInputRoute
   '/docs/label': typeof DocsLabelRoute
   '/docs/nav-menu': typeof DocsNavMenuRoute
@@ -215,6 +222,7 @@ export interface FileRoutesByTo {
   '/docs/dialog': typeof DocsDialogRoute
   '/docs/dropdown-menu': typeof DocsDropdownMenuRoute
   '/docs/getting-started': typeof DocsGettingStartedRoute
+  '/docs/hidamari-text': typeof DocsHidamariTextRoute
   '/docs/input': typeof DocsInputRoute
   '/docs/label': typeof DocsLabelRoute
   '/docs/nav-menu': typeof DocsNavMenuRoute
@@ -245,6 +253,7 @@ export interface FileRoutesById {
   '/docs/dialog': typeof DocsDialogRoute
   '/docs/dropdown-menu': typeof DocsDropdownMenuRoute
   '/docs/getting-started': typeof DocsGettingStartedRoute
+  '/docs/hidamari-text': typeof DocsHidamariTextRoute
   '/docs/input': typeof DocsInputRoute
   '/docs/label': typeof DocsLabelRoute
   '/docs/nav-menu': typeof DocsNavMenuRoute
@@ -276,6 +285,7 @@ export interface FileRouteTypes {
     | '/docs/dialog'
     | '/docs/dropdown-menu'
     | '/docs/getting-started'
+    | '/docs/hidamari-text'
     | '/docs/input'
     | '/docs/label'
     | '/docs/nav-menu'
@@ -305,6 +315,7 @@ export interface FileRouteTypes {
     | '/docs/dialog'
     | '/docs/dropdown-menu'
     | '/docs/getting-started'
+    | '/docs/hidamari-text'
     | '/docs/input'
     | '/docs/label'
     | '/docs/nav-menu'
@@ -334,6 +345,7 @@ export interface FileRouteTypes {
     | '/docs/dialog'
     | '/docs/dropdown-menu'
     | '/docs/getting-started'
+    | '/docs/hidamari-text'
     | '/docs/input'
     | '/docs/label'
     | '/docs/nav-menu'
@@ -477,6 +489,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsInputRouteImport
       parentRoute: typeof DocsRoute
     }
+    '/docs/hidamari-text': {
+      id: '/docs/hidamari-text'
+      path: '/hidamari-text'
+      fullPath: '/docs/hidamari-text'
+      preLoaderRoute: typeof DocsHidamariTextRouteImport
+      parentRoute: typeof DocsRoute
+    }
     '/docs/getting-started': {
       id: '/docs/getting-started'
       path: '/getting-started'
@@ -561,6 +580,7 @@ interface DocsRouteChildren {
   DocsDialogRoute: typeof DocsDialogRoute
   DocsDropdownMenuRoute: typeof DocsDropdownMenuRoute
   DocsGettingStartedRoute: typeof DocsGettingStartedRoute
+  DocsHidamariTextRoute: typeof DocsHidamariTextRoute
   DocsInputRoute: typeof DocsInputRoute
   DocsLabelRoute: typeof DocsLabelRoute
   DocsNavMenuRoute: typeof DocsNavMenuRoute
@@ -589,6 +609,7 @@ const DocsRouteChildren: DocsRouteChildren = {
   DocsDialogRoute: DocsDialogRoute,
   DocsDropdownMenuRoute: DocsDropdownMenuRoute,
   DocsGettingStartedRoute: DocsGettingStartedRoute,
+  DocsHidamariTextRoute: DocsHidamariTextRoute,
   DocsInputRoute: DocsInputRoute,
   DocsLabelRoute: DocsLabelRoute,
   DocsNavMenuRoute: DocsNavMenuRoute,

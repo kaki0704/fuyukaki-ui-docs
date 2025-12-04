@@ -33,8 +33,8 @@ importers:
         specifier: ^1.132.0
         version: 1.139.6(@tanstack/react-router@1.139.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(vite@7.2.4(@types/node@22.19.1)(jiti@2.6.1)(lightningcss@1.30.2)(tsx@4.20.6))
       fuyukaki-ui:
-        specifier: ^0.3.1
-        version: 0.3.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        specifier: ^0.3.2
+        version: 0.3.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       lucide-react:
         specifier: ^0.544.0
         version: 0.544.0(react@19.2.0)
@@ -1898,8 +1898,8 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  fuyukaki-ui@0.3.1:
-    resolution: {integrity: sha512-ApMpJ6PkLZ5nQCKY1Im6OuRyJZqO68ZkmdpSq0jY2aMtbGRs6qmDlY43kM1AR/uOYqys3Gapt2bWvD9rUv82bQ==}
+  fuyukaki-ui@0.3.2:
+    resolution: {integrity: sha512-giKb6nLgJE2oJ5xEc6vaGI0qtMTwfoiu0T7JI0sFqDNRPVX62im0l7EvbfqwVNbetHdu1Xl4Oh/zAUBfwbMHmQ==}
     peerDependencies:
       react: ^19.0.0
       react-dom: ^19.0.0
@@ -4505,7 +4505,7 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  fuyukaki-ui@0.3.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  fuyukaki-ui@0.3.2(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
     dependencies:
       '@floating-ui/react-dom': 2.1.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       canvas-confetti: 1.9.4

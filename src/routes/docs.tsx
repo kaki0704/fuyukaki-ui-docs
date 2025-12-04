@@ -20,6 +20,7 @@ const components = [
   { name: 'Confetti', path: '/docs/confetti' },
   { name: 'Dialog', path: '/docs/dialog' },
   { name: 'Dropdown Menu', path: '/docs/dropdown-menu' },
+  { name: 'Hidamari Text', path: '/docs/hidamari-text' },
   { name: 'Input', path: '/docs/input' },
   { name: 'Label', path: '/docs/label' },
   { name: 'Nav Menu', path: '/docs/nav-menu' },
