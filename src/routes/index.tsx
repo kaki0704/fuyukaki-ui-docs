@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
-import { Button } from 'fuyukaki-ui'
+import { Button, HidamariText } from 'fuyukaki-ui'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import {
@@ -59,7 +59,7 @@ function Home() {
             <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
               <div className="flex-1 text-center lg:text-left">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">
-                  <span className="text-primary">Fuyukaki UI</span>
+                  <HidamariText colors={['#EB6101', '#F5A623', '#FFD93D']}>Fuyukaki UI</HidamariText>
                   <br />
                   <span className="text-foreground">
                     Natural warmth for your interface
