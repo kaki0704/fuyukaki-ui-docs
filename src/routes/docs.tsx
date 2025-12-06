@@ -14,6 +14,7 @@ const components = [
   { name: 'Alert', path: '/docs/alert' },
   { name: 'Avatar', path: '/docs/avatar' },
   { name: 'Badge', path: '/docs/badge' },
+  { name: 'Breadcrumb', path: '/docs/breadcrumb' },
   { name: 'Button', path: '/docs/button' },
   { name: 'Card', path: '/docs/card' },
   { name: 'Checkbox', path: '/docs/checkbox' },

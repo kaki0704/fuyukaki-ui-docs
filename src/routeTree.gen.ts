@@ -34,6 +34,7 @@ import { Route as DocsConfettiRouteImport } from './routes/docs/confetti'
 import { Route as DocsCheckboxRouteImport } from './routes/docs/checkbox'
 import { Route as DocsCardRouteImport } from './routes/docs/card'
 import { Route as DocsButtonRouteImport } from './routes/docs/button'
+import { Route as DocsBreadcrumbRouteImport } from './routes/docs/breadcrumb'
 import { Route as DocsBadgeRouteImport } from './routes/docs/badge'
 import { Route as DocsAvatarRouteImport } from './routes/docs/avatar'
 import { Route as DocsAlertRouteImport } from './routes/docs/alert'
@@ -163,6 +164,11 @@ const DocsButtonRoute = DocsButtonRouteImport.update({
   path: '/button',
   getParentRoute: () => DocsRoute,
 } as any)
+const DocsBreadcrumbRoute = DocsBreadcrumbRouteImport.update({
+  id: '/breadcrumb',
+  path: '/breadcrumb',
+  getParentRoute: () => DocsRoute,
+} as any)
 const DocsBadgeRoute = DocsBadgeRouteImport.update({
   id: '/badge',
   path: '/badge',
@@ -185,6 +191,7 @@ export interface FileRoutesByFullPath {
   '/docs/alert': typeof DocsAlertRoute
   '/docs/avatar': typeof DocsAvatarRoute
   '/docs/badge': typeof DocsBadgeRoute
+  '/docs/breadcrumb': typeof DocsBreadcrumbRoute
   '/docs/button': typeof DocsButtonRoute
   '/docs/card': typeof DocsCardRoute
   '/docs/checkbox': typeof DocsCheckboxRoute
@@ -215,6 +222,7 @@ export interface FileRoutesByTo {
   '/docs/alert': typeof DocsAlertRoute
   '/docs/avatar': typeof DocsAvatarRoute
   '/docs/badge': typeof DocsBadgeRoute
+  '/docs/breadcrumb': typeof DocsBreadcrumbRoute
   '/docs/button': typeof DocsButtonRoute
   '/docs/card': typeof DocsCardRoute
   '/docs/checkbox': typeof DocsCheckboxRoute
@@ -246,6 +254,7 @@ export interface FileRoutesById {
   '/docs/alert': typeof DocsAlertRoute
   '/docs/avatar': typeof DocsAvatarRoute
   '/docs/badge': typeof DocsBadgeRoute
+  '/docs/breadcrumb': typeof DocsBreadcrumbRoute
   '/docs/button': typeof DocsButtonRoute
   '/docs/card': typeof DocsCardRoute
   '/docs/checkbox': typeof DocsCheckboxRoute
@@ -278,6 +287,7 @@ export interface FileRouteTypes {
     | '/docs/alert'
     | '/docs/avatar'
     | '/docs/badge'
+    | '/docs/breadcrumb'
     | '/docs/button'
     | '/docs/card'
     | '/docs/checkbox'
@@ -308,6 +318,7 @@ export interface FileRouteTypes {
     | '/docs/alert'
     | '/docs/avatar'
     | '/docs/badge'
+    | '/docs/breadcrumb'
     | '/docs/button'
     | '/docs/card'
     | '/docs/checkbox'
@@ -338,6 +349,7 @@ export interface FileRouteTypes {
     | '/docs/alert'
     | '/docs/avatar'
     | '/docs/badge'
+    | '/docs/breadcrumb'
     | '/docs/button'
     | '/docs/card'
     | '/docs/checkbox'
@@ -545,6 +557,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsButtonRouteImport
       parentRoute: typeof DocsRoute
     }
+    '/docs/breadcrumb': {
+      id: '/docs/breadcrumb'
+      path: '/breadcrumb'
+      fullPath: '/docs/breadcrumb'
+      preLoaderRoute: typeof DocsBreadcrumbRouteImport
+      parentRoute: typeof DocsRoute
+    }
     '/docs/badge': {
       id: '/docs/badge'
       path: '/badge'
@@ -573,6 +592,7 @@ interface DocsRouteChildren {
   DocsAlertRoute: typeof DocsAlertRoute
   DocsAvatarRoute: typeof DocsAvatarRoute
   DocsBadgeRoute: typeof DocsBadgeRoute
+  DocsBreadcrumbRoute: typeof DocsBreadcrumbRoute
   DocsButtonRoute: typeof DocsButtonRoute
   DocsCardRoute: typeof DocsCardRoute
   DocsCheckboxRoute: typeof DocsCheckboxRoute
@@ -602,6 +622,7 @@ const DocsRouteChildren: DocsRouteChildren = {
   DocsAlertRoute: DocsAlertRoute,
   DocsAvatarRoute: DocsAvatarRoute,
   DocsBadgeRoute: DocsBadgeRoute,
+  DocsBreadcrumbRoute: DocsBreadcrumbRoute,
   DocsButtonRoute: DocsButtonRoute,
   DocsCardRoute: DocsCardRoute,
   DocsCheckboxRoute: DocsCheckboxRoute,
